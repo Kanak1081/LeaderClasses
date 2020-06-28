@@ -1,0 +1,361 @@
+
+* {
+    box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+  }
+  html, body {
+    height: 100%;
+    overflow: hidden;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  .page {
+    height: 100%;
+    background-color: #232b3b;
+    
+    }
+  .content {
+    height: 200%;
+    transform-origin: top left;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+    /*background-color: #f0f0f0;*/
+   
+  }
+  .content_inner {
+    height: 50%;
+    
+    /*padding: 50px 20%;*/
+    overflow-y: auto;
+  }
+  /* basically all styling from now on */
+  .menu_toggle {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+    background-color: #232b3b;
+    border-bottom-right-radius: 100%;
+  }
+  .menu_toggle:active i {
+    opacity: 0.8;
+  }
+  .menu_toggle i {
+    color: #f0f0f0;
+  }
+  .menu_toggle .menu_open, .menu_toggle .menu_close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  }
+  .menu_toggle .menu_open {
+    transform-origin: -100px -100px;
+  }
+  .menu_toggle .menu_close {
+    transform: rotate(20deg);
+    transform-origin: -100px -160px;
+  }
+  .menu_items {
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu_items li {
+    height: 60px;
+    margin-bottom: 30px;
+    transform: translateX(-300px);
+    transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
+  }
+  .menu_items li:nth-child(2) {
+    margin-left: 40px;
+  }
+  .menu_items li:nth-child(3) {
+    margin-left: 80px;
+  }
+  .menu_items a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a4a4a4;
+    transition: color 0.2s;
+  }
+  .menu_items a .icon {
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+    color: #f0f0f0;
+  }
+  .menu_items a .icon:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-left: -33px;
+    margin-top: -32px;
+    border-radius: 100%;
+    border: 2px solid #f0f0f0;
+    transition: border-color 0.2s;
+  }
+  .menu_items a:hover {
+    color: #f0f0f0;
+  }
+  .menu_items a:hover .icon:after {
+    border-color: #f37272;
+  }
+  .menu_items a:active .icon {
+    color: #f37272;
+  }
+  /* Let's open up the menu */
+  
+  .shazam .content {
+    transform: rotate(-30deg);
+  }
+  .shazam .menu_open {
+    transform: rotate(-20deg);
+  }
+  .shazam .menu_close {
+    transform: rotate(0);
+  }
+  .shazam .menu_items li {
+    transform: translateX(0);
+    transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .shazam .menu_items li:nth-child(2) {
+    transition-delay: 0.47s;
+  }
+  .shazam .menu_items li:nth-child(3) {
+    transition-delay: 0.48s;
+  }
+  h1 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  body {
+    color: #584e4a;
+  }
+          .social i{
+              font-size: 20px;
+              background-color: #f37272;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              color: white;
+              border-radius: 50px;
+          }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg {
+    /* The image used */
+    
+  
+    /* Full height */
+    height: 70%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #intro{
+      background-color: #fff;
+      margin-top: -130px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      width: 850px;
+      height: 300px;
+      margin-right: 0;
+      padding: 20px 10px 20px 10px;
+  }
+  #intro p{
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    text-align: justify;
+  }
+
+  #background-img-container{
+    position: relative;
+    padding-left: 0%;
+    margin-left: 0;
+  }
+  .top-left{
+    position: absolute;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    line-height: 1.7rem;
+    top: 15%;
+    left:90%;
+    color: white;
+  }
+
+
+  /*Buttons*/
+  
+.main-container {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.btn-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height:100px;
+}
+
+.ct-btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin:20px;
+}
+
+/* Common CSS for all Buttons */
+button {
+  font-size: 20px;
+  width: 150px;
+  height: 60px;
+  border-radius: 40px;
+  cursor:pointer;
+  font-family: lato;
+}
+
+/* Solid Button */
+.sky-neon {
+  color: #1c5169;
+  background-color: #86dbff;
+  -webkit-transition: .3s all ease-in;
+  transition: .3s all ease-in;
+  border: 2px solid transparent;
+}
+
+.sky-neon:hover, .sky-neon:focus {
+  -webkit-box-shadow: 0px 0px 20px 15px #3cc6d8;
+  box-shadow: 0px 0px 30px 20px #3cc6d8;
+  background-color: #d7f3ff;
+}
+
+/* CEO Testimonials */
+/* Testimonial Section */
+
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-family: 'Merriweather', serif;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}/* Testimonial Section */
+
+#testimonials {
+  background-color: wheat;
+  padding: 5% 10% 5% 10%;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 20%;
+  border-radius: 100%;
+  margin-left: 400px;
+}
+
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+#companies{
+  padding: 80px 50px 80px 50px;
+}
+
+footer{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.page_links{
+  margin-top: -130px;
+  margin-left: 50px;
+  padding-left: 100px;
+}
+
+.page_links li{
+  list-style: none;
+  font-size: 2rem;
+
+
+}
+
